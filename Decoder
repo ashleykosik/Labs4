@@ -1,0 +1,56 @@
+
+//my attempt
+// function decoder (str) {
+//     let alpha = 'abcdefghijklmnopqrstuvwxyz'
+//     let num = str[0] // or slice(0,1)
+//     console.log(num)
+//     let sub = str.slice(1, str.length).split('')
+//     console.log(sub)
+//     let a = []
+//     for(let i = 0; i < str.length; i++) {
+//         for(let j = 0; j < 26; i++) {
+//     if (sub[i] === alpha[j]) {
+//         num = parseInt(j + num)
+//         return a = alpha[num]
+//     }
+    
+// }
+// }
+// console.log(a)
+   
+// }
+
+Elise Heard (she/they) — Today at 10:50 AM
+const shift = (str) => {
+  let newStr = ''
+  str.split('').slice(1, str.length).forEach(char => 'abcdefghijklmnopqrstuvwxyz'.split('').forEach((letter, index) => char === letter ? newStr += 'abcdefghijklmnopqrstuvwxyz'.split('')[index + +str.charAt(0)]: 0))
+  return newStr
+}
+
+//
+//
+let alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+let alphabetList = alphabet.split("");
+
+const myFunction = (string) => {
+  let number = Number(string.split("")[0]);
+  const revealed = [];
+
+  for (let i = 0; i < alphabetList.length; i++) {
+    let alphabetChar = alphabetList[i];
+    for (let j = 1; j < string.length; j++) {
+      let stringChar = string[j];
+      if (stringChar === alphabetList[i - number]) {
+        revealed.push(alphabetChar);
+      }
+    }
+  }
+  return revealed.join("");
+};
+
+console.log(myFunction("1a"));
+console.log(shift("2fcjjm"))
+
+//decoder('1a')
+decoder('2fcjjm')
