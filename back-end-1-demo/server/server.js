@@ -34,3 +34,8 @@ app.get('/api/inventory/:id', (req, res) => {
 
 //runs the server
 app.listen(5050, () => console.log(`jammin on 5050`))
+
+//
+app.get("/api/:name") (req, res) =>  {
+    
+}
