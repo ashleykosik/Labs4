@@ -1,0 +1,26 @@
+
+
+function parens (item) {
+    item = item.split('')
+    //console.log(item)
+    let one = item.filter((i) => i === "(")
+    let two = item.filter((i) => i === ")")
+    if (one.length === two.length) {
+        return console.log(true)
+    } else {
+        return console.log(false)
+    }
+}
+
+
+parens("()")
+// true
+
+parens("()(")
+// false
+
+parens(("((There's a bonus open paren here.)"))
+parens("Hey...there are no parens here!")
+
+//short version
+const balancedStr = (str) => str.split('').filter(el => el === '(' || el === ')').length % 2 === 0
